@@ -1,0 +1,441 @@
+/* main styles */
+
+/* fonts */
+@font-face {
+  font-family: 'Host Grotesk';
+  src: url('../fonts/HostGrotesk-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Host Grotesk';
+  src: url('../fonts/HostGrotesk-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Host Grotesk';
+  src: url('../fonts/HostGrotesk-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Host Grotesk';
+  src: url('../fonts/HostGrotesk-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==============================
+   Variables
+   ============================== */
+:root {
+  /* Colors */
+  --color-primary: #0a2472; /* A strong, mid-blue for main actions */
+  --color-primary-hover: #051650; /* A darker blue for hover state */
+  --color-accent: #E5B355; /* The contrasting green for highlights */
+  --color-bg: white; /* Light background for the page */
+  --color-surface: #f8f8f9; /* White for card/component backgrounds */
+  --color-surface-alt: #CADEDE; /* Light grey/blue for subtle variation */
+  --color-text: #00072d; /* The darkest blue for primary text */
+  --color-text-muted: #123499; /* A mid-blue for secondary/muted text */  
+  --color-border: rgba(0, 7, 45, 0.1); /* Based on the darkest blue for subtle border */
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #123499, #0a2472);
+  --gradient-accent: linear-gradient(135deg, #5eaf73, #CADEDE);
+
+  /* Typography */
+  --font-family-base: 'Host Grotesk', sans-serif;
+  --header-font-size: 3.5rem;
+
+  /* Spacing Scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --section-padding: 100px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.25);
+
+  /* Radius */
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-12: 12px;
+  --radius-24: 24px;
+
+  /* Transitions */
+  --transition-1: 0.25s ease-in-out;
+  --transition-2: 0.5s ease-in-out;
+  --transition-3: 1s ease-in-out;
+}
+
+/* ==============================
+   Global Reset & Base
+   ============================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-base);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  overflow-x: hidden;
+}
+li { list-style: none; }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+address { font-style: normal; }
+table { border-collapse: collapse; width: 100%; }
+
+
+/* slider fix */
+.portfolio {
+  position: relative;
+  min-height: 100vh;
+}
+
+.portfolio .swiper {
+  height: 100vh;
+}
+
+.portfolio .swiper-wrapper,
+.portfolio .swiper-slide {
+  height: 100%;
+}
+
+.portfolio__item {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  overflow: visible !important;
+}
+/* slider fix ends */
+
+/* --- first feature-section--- */
+.niit-intro {
+  padding: var(--section-padding) 0;
+  background: var(--color-bg); 
+  color: var(--color-text); 
+}
+
+/* --- Top Section Layout --- */
+.niit-intro__top {
+  display: flex;
+  gap: var(--space-xl); 
+  margin-bottom: var(--space-2xl);
+  align-items: flex-start; 
+}
+
+.niit-intro__left,
+.niit-intro__right {
+  flex: 1; 
+}
+
+.niit-intro__left h2 {
+  font-size: 3.5rem; 
+  line-height: 1.1;
+  font-weight: 500;
+  color: var(--color-text); 
+  width: 60%;
+}
+
+.niit-intro__right p {
+  color: var(--color-text); 
+  margin-bottom: var(--space-md);
+  line-height: 1.6;
+  font-size: 2rem;
+}
+
+
+.btn-dark {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: var(--radius-8);
+  font-size: 1.5rem;
+}
+.btn-dark:hover {
+  background: var(--color-text);
+  transition: background var(--transition-1);
+}
+
+/* --- Card Layout --- */
+.niit-intro__cards {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.niit-card {
+  flex: 1; 
+  padding: var(--space-xl); 
+  border-radius: var(--radius-4); 
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography inside cards */
+.niit-card h3 {
+  font-size: 2rem;
+  margin-bottom: var(--space-md);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+/* The Horizontal Divider Line */
+.card-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0,0,0, 0.1);
+  margin-bottom: var(--space-md);
+}
+
+/* List Styling */
+.niit-card ul {
+  list-style: none; /* Remove default bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.niit-card ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: var(--space-sm);
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Custom Bullet Points */
+.niit-card ul li::before {
+  content: "•"; /* Bullet character */
+  position: absolute;
+  left: 0;
+  color: currentColor; /* Matches text color */
+  font-weight: bold;
+}
+
+/* --- Card Variations --- */
+
+.niit-card--muted {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+/* Highlight Card (White) */
+.niit-card--highlight {
+  background: var(--color-primary);
+  color: var(--color-surface);
+}
+.niit-card--highlight .header--3 {
+  color: var(--color-surface);
+}
+.card-divider-highlight {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-surface);
+  margin-bottom: var(--space-md);
+}
+/* tools carousel */
+.niit-tools {
+  padding: 80px 0;
+  background: var(--color-bg);
+}
+
+.niit-tools__title {
+  text-align: center;
+  font-size: var(--header-font-size);
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: var(--color-text-muted);
+}
+
+/* Wrapper creates fade effect */
+.niit-tools__slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Edge fade using mask */
+.niit-tools__slider-wrapper::before,
+.niit-tools__slider-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.niit-tools__slider-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-bg), transparent);
+}
+
+.niit-tools__slider-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-bg), transparent);
+}
+
+.niit-tools-slider {
+  width: 100%;
+}
+
+.niit-tools-slider .swiper-slide {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+}
+
+.niit-tools-slider img {
+  height: 50px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.niit-tools-slider img:hover {
+  opacity: 1;
+}
+/* ===============================
+   NIIT IMPACT SECTION
+================================ */
+
+.niit-impact {
+  position: relative;
+  padding: 140px 0;
+  background: url("../../assets/images/background/background1.png") center/cover no-repeat;
+  color: #fff;
+}
+
+/* dark overlay for readability */
+.niit-impact__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.niit-impact .container {
+  position: relative;
+  z-index: 2;
+}
+
+.niit-impact__grid {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+/* LEFT CONTENT */
+.niit-impact__content {
+  flex: 1;
+  max-width: 720px;
+}
+
+.niit-impact__label {
+  display: block;
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  opacity: 0.85;
+}
+
+.niit-impact__content h2 {
+  font-size: 4rem;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.niit-impact__content p {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  opacity: 0.9;
+  color: var(--color-surface);
+}
+
+/* RIGHT STATS */
+.niit-impact__stats {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-left: auto;
+
+}
+
+/* GLASS CARD */
+.impact-card {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* number row */
+.impact-card h3 {
+  font-size: 4.2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* divider line */
+.impact-card::after {
+  content: "";
+  height: 1px;
+  background: rgba(255, 255, 255, 0.35);
+  margin: 12px 0;
+}
+
+/* description text */
+.impact-card span {
+  font-size: 1.4rem;
+  opacity: 0.85;
+  line-height: 1.5;
+}
