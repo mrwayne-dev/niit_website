@@ -81,3 +81,20 @@ document.addEventListener("DOMContentLoaded", () => {
     freeModeMomentum: false,
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach(item => {
+    const button = item.querySelector(".faq-question");
+
+    button.addEventListener("click", () => {
+      // close others
+      faqItems.forEach(i => {
+        if (i !== item) i.classList.remove("active");
+      });
+
+      // toggle current
+      item.classList.toggle("active");
+    });
+  });
+});

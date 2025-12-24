@@ -97,6 +97,7 @@ $useTemplateAssets = true;
                         <nav class="main-menu">
                             <ul>
                                 <li><a href="/courses">Courses</a></li>
+                                <li><a href="/diploma">Diploma</a></li>
                                 <li><a href="/about">About</a></li>
                                 <li><a href="/contact">Contact </a></li>
                             </ul>
@@ -338,6 +339,240 @@ $useTemplateAssets = true;
                         </div>
                     </div>
                     </section>
+
+                    <section class="niit-courses">
+                        <div class="container large">
+
+                            <h2 class="niit-courses__title">Our Featured Courses</h2>
+
+                            <div class="niit-courses__grid">
+
+                            <!-- LEFT: IMAGE -->
+                            <div class="niit-courses__media">
+                                <img
+                                src="../../assets/images/courses/webdevelopment.png"
+                                alt="Web Development Course"
+                                />
+                            </div>
+
+                            <!-- RIGHT: CONTENT -->
+                            <div class="niit-courses__content">
+                                <!-- TOP -->
+                                <h3>Web Development</h3>
+
+                                <!-- BOTTOM -->
+                                <div class="niit-courses__details">
+                                    <p>
+                                    Learn how to design applications and products that help startups
+                                    and global brands craft engaging, scalable software solutions.
+                                    </p>
+
+                                    <div class="niit-courses__divider"></div>
+
+                                    <div class="niit-courses__meta">
+                                    <div>
+                                        <strong>6 Months</strong>
+                                        <span>Mentorship</span>
+                                    </div>
+
+                                    <div>
+                                        <strong>Live classes</strong>
+                                    </div>
+                                    </div>
+
+                                    <a href="#" class="niit-courses__link">Learn more →</a>
+                                </div>
+
+                                </div>
+
+
+                            </div>
+                            <div class="niit-courses__grid">
+
+                                <!-- LEFT: IMAGE -->
+                                <div class="niit-courses__media">
+                                    <img
+                                    src="../../assets/images/courses/softwareengr3.jpg"
+                                    alt="MMS Software Engineering Course"
+                                    />
+                                </div>
+
+                                <!-- RIGHT: CONTENT -->
+                                <div class="niit-courses__content">
+                                    <!-- TOP -->
+                                    <h3>MMS - BSc Software Engineering</h3>
+
+                                    <!-- BOTTOM -->
+                                    <div class="niit-courses__details">
+                                        <p>
+                                        Learn how to design applications and products that help startups
+                                        and global brands craft engaging, scalable software solutions.
+                                        </p>
+
+                                        <div class="niit-courses__divider"></div>
+
+                                        <div class="niit-courses__meta">
+                                        <div>
+                                            <strong>2 Years</strong>
+                                            <span>Mentorship</span>
+                                        </div>
+
+                                        <div>
+                                            <strong>Live classes</strong>
+                                        </div>
+                                        </div>
+
+                                        <a href="#" class="niit-courses__link">Learn more →</a>
+                                    </div>
+
+                                    </div>
+                                </div>
+                            <div class="niit-courses__grid">
+
+                                <!-- LEFT: IMAGE -->
+                                <div class="niit-courses__media">
+                                    <img
+                                    src="../../assets/images/courses/multimedia.avif"
+                                    alt="MMS Software Engineering Course"
+                                    />
+                                </div>
+
+                                <!-- RIGHT: CONTENT -->
+                                <div class="niit-courses__content">
+                                    <!-- TOP -->
+                                    <h3>Multimedia</h3>
+
+                                    <!-- BOTTOM -->
+                                    <div class="niit-courses__details">
+                                        <p>
+                                        Learn how to design applications and products that help startups
+                                        and global brands craft engaging, scalable software solutions.
+                                        </p>
+
+                                        <div class="niit-courses__divider"></div>
+
+                                        <div class="niit-courses__meta">
+                                        <div>
+                                            <strong>3 Months</strong>
+                                            <span>Mentorship</span>
+                                        </div>
+
+                                        <div>
+                                            <strong>Live classes</strong>
+                                        </div>
+                                        </div>
+
+                                        <a href="#" class="niit-courses__link">Learn more →</a>
+                                    </div>
+
+                                    </div>
+                                </div>
+
+                        </div>
+                    </section>
+
+                    <section class="niit-faq">
+                        <div class="container large">
+
+                            <div class="niit-faq__header">
+                            <span class="niit-faq__label">
+                                <i class="ph ph-star-four"></i> FAQs
+                            </span>
+                            <h2>We’ve got the answers</h2>
+                            </div>
+
+                            <div class="niit-faq__list">
+
+                            <!-- ITEM -->
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                <span>Can I use NIIT courses for professional certification?</span>
+                                <i class="ph ph-plus"></i>
+                                </button>
+                                <div class="faq-answer">
+                                <p>
+                                    Yes. NIIT programs are industry-aligned and designed to prepare
+                                    students for real-world professional certifications and careers.
+                                </p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                <span>Are classes physical or online?</span>
+                                <i class="ph ph-plus"></i>
+                                </button>
+                                <div class="faq-answer">
+                                <p>
+                                    Classes are instructor-led and held physically at NIIT Port Harcourt,
+                                    with guided hands-on sessions.
+                                </p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                <span>Do I need prior tech experience?</span>
+                                <i class="ph ph-plus"></i>
+                                </button>
+                                <div class="faq-answer">
+                                <p>
+                                    No prior experience is required. Our courses are structured to take
+                                    beginners to industry-ready professionals.
+                                </p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                <span>Do I need prior tech experience?</span>
+                                <i class="ph ph-plus"></i>
+                                </button>
+                                <div class="faq-answer">
+                                <p>
+                                    No prior experience is required. Our courses are structured to take
+                                    beginners to industry-ready professionals.
+                                </p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                <span>Do I need prior tech experience?</span>
+                                <i class="ph ph-plus"></i>
+                                </button>
+                                <div class="faq-answer">
+                                <p>
+                                    No prior experience is required. Our courses are structured to take
+                                    beginners to industry-ready professionals.
+                                </p>
+                                </div>
+                            </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="niit-cta">
+                        <div class="niit-cta__overlay"></div>
+
+                        <div class="container large">
+                            <div class="niit-cta__content">
+
+                            <h2>
+                                Ready to start your <br>
+                                tech journey with NIIT?
+                            </h2>
+
+                            <p>
+                                Join a learning environment built for real-world impact, mentorship,
+                                and globally relevant skills.
+                            </p>
+                            </div>
+                        </div>
+                    </section>
+
+
 
                 </main>
             </div>
