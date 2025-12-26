@@ -2,7 +2,6 @@
 
 <!-- Vendor CSS Files -->
 <link rel="stylesheet" href="/assets/vendor/css/bootstrap.min.css">
-<link rel="stylesheet" href="/assets/vendor/css/fontawesome.min.css">
 <link rel="stylesheet" href="/assets/vendor/css/animate.min.css">
 <link rel="stylesheet" href="/assets/vendor/css/magnific-popup.css">
 <link rel="stylesheet" href="/assets/vendor/css/meanmenu.min.css">
@@ -10,7 +9,6 @@
 <link rel="stylesheet" href="/assets/vendor/css/effect-slicer.min.css">
 <link rel="stylesheet" href="/assets/vendor/css/spacing.css">
 <link rel="stylesheet" href="/assets/vendor/css/odometer.min.css">
-<link rel="stylesheet" href="/assets/vendor/css/progressbar.css">
 <link rel="stylesheet" href="/assets/vendor/css/carouselTicker.css">
 
 <!-- Template Main CSS -->

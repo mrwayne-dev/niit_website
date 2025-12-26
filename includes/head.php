@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $pageTitle ?? "NIIT - Port Harcourt" ?></title>
 
-    <!-- Fonts -->
-    <link rel="preload" href="/assets/fonts/HostGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/fonts/HostGrotesk-Bold.woff2" as="font" type="font/woff2" crossorigin>
-
     <!-- Icons -->
     <link rel="stylesheet" href="/assets/vendor/phosphor/regular/style.css">
     <link rel="stylesheet" href="/assets/vendor/phosphor/bold/style.css">

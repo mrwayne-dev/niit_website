@@ -112,7 +112,7 @@ work page css
   font-weight: 400;
 }
 /* bdo grotesk  */
-@font-face {
+/* @font-face {
   font-family: "BDOGrotesk-Regular";
   src: url("../fonts/BDOGrotesk-Regular.ttf");
   font-weight: 400;
@@ -126,7 +126,7 @@ work page css
   font-family: "BDOGrotesk-Regular";
   src: url("../fonts/BDOGrotesk-DemiBold.ttf");
   font-weight: 600;
-}
+} */
 /* tartufffo trial */
 @font-face {
   font-family: "Tartuffo_Trial";
@@ -208,7 +208,7 @@ work page css
 }
 
 body {
-  font-family: var(--font_dmsans);
+  /* font-family: var(--font_dmsans); */
   line-height: 1;
 }
 
@@ -226,7 +226,7 @@ h6 {
   margin: 0;
   color: var(--primary);
   line-height: 1.22;
-  font-family: var(--font_instrumentsans);
+  /* font-family: var(--font_instrumentsans); */
   font-weight: 500;
 }
 
@@ -10247,7 +10247,7 @@ video.video-area {
 
 /* portfolio page css */
 .body-portfolio-agency .header-area-7 {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   width: 100%;

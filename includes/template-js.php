@@ -21,7 +21,6 @@
 <script src="/assets/vendor/js/matter.js"></script>
 <script src="/assets/vendor/js/throwable.js"></script>
 <script src="/assets/vendor/js/odometer.min.js"></script>
-<script src="/assets/vendor/js/progressbar.min.js"></script>
 <script src="/assets/vendor/js/jquery.carouselTicker.js"></script>
 <script src="/assets/vendor/js/effect-slicer.min.js"></script>
 <script src="/assets/vendor/js/waypoints.min.js"></script>
