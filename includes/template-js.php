@@ -28,6 +28,10 @@
 <!-- Template Main JS -->
 <script src="/assets/vendor/js/main.js"></script>
 
+<!-- NIIT Main JS -->
+<script src="/assets/js/script.js"></script>
+
+
 <!-- Icon JS -->
  <script src="/assets/vendor/phosphor/index.js"></script>
 

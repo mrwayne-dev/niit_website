@@ -16991,7 +16991,7 @@ video.video-area {
   color: var(--white);
 }
 .header-area-7 .main-menu > ul > li > a:hover {
-  opacity: 0.8;
+  opacity: 0.5;
 }
 .header-area-7 .search-icon {
   color: var(--primary);

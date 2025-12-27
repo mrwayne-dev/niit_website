@@ -668,7 +668,7 @@ $useTemplateAssets = true;
     <?php include "../../includes/footer.php"; ?>
     <?php include "../../includes/template-js.php"; ?>
 
-    <script src="/assets/js/script.js"></script>
+    
 
 
 </body>
