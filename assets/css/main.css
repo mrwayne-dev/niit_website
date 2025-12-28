@@ -980,3 +980,127 @@ main {
   line-height: 1.6;
   opacity: 0.9;
 }
+/* ===============================
+   DIPLOMA SPLIT SECTION
+================================ */
+
+.diploma-split {
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+}
+
+/* shared styles */
+.diploma-split__item {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-2xl);
+  color: var(--color-surface);
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform var(--transition-2);
+}
+/* background image layer */
+.diploma-split__item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1);
+  transition: transform 1s ease;
+  z-index: 0;
+}
+
+/* individual images */
+.diploma-split__item.left::before {
+  background-image: url("../../assets/images/background/leftbgdiploma.png");
+}
+
+.diploma-split__item.right::before {
+  background-image: url("../../assets/images/background/rightbgdiploma.png");
+}
+/* IMAGE SCALE */
+.diploma-split__item:hover::before {
+  transform: scale(1.08);
+}
+
+/* OVERLAY DARKENS */
+.diploma-split__item:hover .diploma-split__overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* TEXT LIFT */
+.diploma-split__content {
+  transition: transform 0.6s ease;
+}
+
+.diploma-split__item:hover .diploma-split__content {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* CTA underline */
+.diploma-split__item:hover .diploma-split__cta {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.diploma-split__item.right {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.diploma-split__item.right .diploma-split__content {
+  margin-left: auto;
+}
+
+/* dark overlay */
+.diploma-split__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  transition: background var(--transition-2);
+  z-index: 1;
+}
+
+/* content */
+.diploma-split__content {
+  position: relative;
+  z-index: 2;
+  max-width: 420px;
+}
+
+.diploma-split__content h2 {
+  font-size: 3.6rem;
+  font-weight: 500;
+  margin-bottom: var(--space-sm);
+}
+
+.diploma-split__content p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: var(--space-md);
+}
+
+.diploma-split__cta {
+  font-size: 1.4rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+/* hover effects */
+.diploma-split__item:hover {
+  transform: scale(1.02);
+}
+
+.diploma-split__item:hover .diploma-split__overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.diploma-split__item:hover .diploma-split__cta {
+  opacity: 1;
+  text-decoration: underline;
+}

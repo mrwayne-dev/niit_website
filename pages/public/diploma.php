@@ -21,23 +21,26 @@ $current_page = "diploma";
                     </section>
                     <!-- portfolio end -->
 
-                    <section class="niit-cta">
-                        <div class="niit-cta__overlay"></div>
-
-                        <div class="container large">
-                            <div class="niit-cta__content">
-
-                            <h2>
-                                Ready to start your <br>
-                                tech journey with NIIT?
-                            </h2>
-
-                            <p>
-                                Join a learning environment built for real-world impact, mentorship,
-                                and globally relevant skills.
-                            </p>
+                    <section class="diploma-split">
+                    <!-- LEFT DIPLOMA -->
+                        <a href="/diploma/software-engineering" class="diploma-split__item left">
+                            <div class="diploma-split__overlay"></div>
+                            <div class="diploma-split__content">
+                            <h2>MMS Software Engineering</h2>
+                            <p>Deep technical training for modern software careers.</p>
+                            <span class="diploma-split__cta">Explore programme →</span>
                             </div>
-                        </div>
+                        </a>
+
+                        <!-- RIGHT DIPLOMA -->
+                        <a href="/diploma/multimedia" class="diploma-split__item right">
+                            <div class="diploma-split__overlay"></div>
+                            <div class="diploma-split__content">
+                            <h2>MMS Infrastructure Engineering</h2>
+                            <p>Creative technology for digital media professionals.</p>
+                            <span class="diploma-split__cta">Explore programme →</span>
+                            </div>
+                        </a>
                     </section>
 
     <?php include "../../includes/footer.php"; ?>
