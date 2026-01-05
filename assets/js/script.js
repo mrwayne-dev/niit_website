@@ -98,5 +98,27 @@ document.addEventListener("DOMContentLoaded", () => {
       item.classList.toggle("active");
     });
   });
+  const openBtn = document.getElementById("openCourseModal");
+  const closeBtn = document.getElementById("closeCourseModal");
+  const modal = document.getElementById("courseModal");
+
+  if (openBtn && closeBtn && modal) {
+    const backdrop = modal.querySelector(".course-modal__backdrop");
+
+    openBtn.addEventListener("click", () => {
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+    });
+
+    backdrop.addEventListener("click", () => {
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+    });
+  }
 
 });

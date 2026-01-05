@@ -1,7 +1,7 @@
 # ==================================================
 # NIIT Website .htaccess
 # Clean Routing • Performance • Security
-# Local + Production Safe
+# SPA-friendly
 # ==================================================
 
 <IfModule mod_rewrite.c>
@@ -11,17 +11,14 @@ RewriteBase /
 # --------------------------------------------------
 # ENVIRONMENT DETECTION
 # --------------------------------------------------
-
-# Localhost (Laragon / XAMPP)
 RewriteCond %{HTTP_HOST} ^localhost [NC]
 SetEnv NIIT_ENV dev
 
-# Production
 RewriteCond %{HTTP_HOST} !^localhost [NC]
 SetEnv NIIT_ENV prod
 
 # --------------------------------------------------
-# FORCE HTTPS + REMOVE WWW (PRODUCTION ONLY)
+# FORCE HTTPS + REMOVE WWW (PROD ONLY)
 # --------------------------------------------------
 RewriteCond %{ENV:NIIT_ENV} =prod
 RewriteCond %{HTTPS} !=on [OR]
@@ -30,14 +27,13 @@ RewriteCond %{HTTP_HOST} ^(?:www\.)?(.*)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 
 # --------------------------------------------------
-# PREVENT DIRECT BROWSER ACCESS TO /pages/
-# (SAFE: does not break PHP includes)
+# BLOCK DIRECT ACCESS TO /pages/ FROM URL BAR
 # --------------------------------------------------
 RewriteCond %{THE_REQUEST} \s/pages/ [NC]
 RewriteRule ^ pages/public/error.php [L]
 
 # --------------------------------------------------
-# STATIC ASSETS (NO REWRITE / NO REDIRECT)
+# STATIC ASSETS (NO TOUCH)
 # --------------------------------------------------
 RewriteCond %{REQUEST_URI} ^/assets/ [NC,OR]
 RewriteCond %{REQUEST_URI} \.(css|js|png|jpg|jpeg|gif|webp|svg|ico|woff2?|ttf|eot|mp4)$ [NC]
@@ -46,16 +42,15 @@ RewriteRule ^ - [L]
 # --------------------------------------------------
 # API ROUTES
 # --------------------------------------------------
-RewriteCond %{REQUEST_URI} ^/api/ [NC]
 RewriteRule ^api/(.*)$ api/$1 [L,QSA]
 
 # --------------------------------------------------
-# HOME PAGE
+# HOME ( / AND /index )
 # --------------------------------------------------
-RewriteRule ^/?$ pages/public/index.php [L,QSA]
+RewriteRule ^(index)?/?$ pages/public/index.php [L,QSA]
 
 # --------------------------------------------------
-# PUBLIC ROUTES
+# PUBLIC PAGES
 # --------------------------------------------------
 RewriteRule ^about/?$ pages/public/about.php [L,QSA]
 RewriteRule ^courses/?$ pages/public/courses.php [L,QSA]
@@ -65,18 +60,19 @@ RewriteRule ^login/?$ pages/public/login.php [L,QSA]
 RewriteRule ^register/?$ pages/public/register.php [L,QSA]
 
 # --------------------------------------------------
-# COURSE SUB-PAGES
+# COURSE / DIPLOMA PAGES (FLAT URLS)
 # --------------------------------------------------
-RewriteRule ^courses/webdev/?$ pages/public/courses/webdev.php [L,QSA]
-RewriteRule ^courses/mms/?$ pages/public/courses/mms.php [L,QSA]
-RewriteRule ^courses/multimedia/?$ pages/public/courses/multimedia.php [L,QSA]
+RewriteRule ^software-engineering/?$ pages/public/courses/software-engineering.php [L,QSA]
+RewriteRule ^infrastructure/?$ pages/public/courses/infrastructure.php [L,QSA]
+RewriteRule ^multimedia/?$ pages/public/courses/multimedia.php [L,QSA]
+RewriteRule ^webdev/?$ pages/public/courses/webdev.php [L,QSA]
 
 # --------------------------------------------------
-# CATCH-ALL → 404
+# SPA FALLBACK (IMPORTANT)
 # --------------------------------------------------
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^.*$ pages/public/error.php [L,QSA]
+RewriteRule ^ pages/public/index.php [L,QSA]
 
 </IfModule>
 
@@ -91,7 +87,7 @@ Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
 </IfModule>
 
 # ==================================================
-# CACHING / PERFORMANCE
+# CACHING
 # ==================================================
 <IfModule mod_expires.c>
 ExpiresActive On
@@ -104,7 +100,4 @@ ExpiresByType application/javascript "access plus 1 month"
 ExpiresByType application/font-woff2 "access plus 1 year"
 </IfModule>
 
-# ==================================================
-# DIRECTORY LISTING PROTECTION
-# ==================================================
 Options -Indexes

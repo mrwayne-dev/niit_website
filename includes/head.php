@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $pageTitle ?? "NIIT - Port Harcourt" ?></title>
 
-    <!-- Zirostack Primary Styles (override template later) -->
+    <!-- Icons -->
+    <link rel="stylesheet" href="/assets/vendor/phosphor/regular/style.css">
+    <link rel="stylesheet" href="/assets/vendor/phosphor/bold/style.css">
+    <link rel="stylesheet" href="/assets/vendor/phosphor/duotone/style.css">
+
+    <!-- NIIT Primary Styles (override template later) -->
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/responsive.css">
 

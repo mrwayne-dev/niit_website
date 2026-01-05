@@ -1,11 +1,13 @@
 <?php
+require_once __DIR__ . '/../../config/constants.php';
+
 $pageTitle = "NIIT - Port Harcourt";
 $useTemplateAssets = true; 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-<?php include "../../includes/header.php"; ?>
+<?php include INCLUDES_PATH . '/header.php'; ?>
 
                     <!-- portfolio start -->
                     <section class="portfolio">
@@ -356,7 +358,7 @@ $useTemplateAssets = true;
                         </div>
                     </section>
 
-                    <section class="niit-faq">
+                    <section class="niit-faq" id="faq">
                         <div class="container large">
 
                             <div class="niit-faq__header">
@@ -457,6 +459,7 @@ $useTemplateAssets = true;
                         </div>
                     </section>
 
-    <?php include "../../includes/footer.php"; ?>
+    <?php include INCLUDES_PATH . '/footer.php'; ?>
+
 </body>
 </html>

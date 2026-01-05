@@ -1,12 +1,14 @@
 <?php
-$pageTitle = "NIIT - Port Harcourt";
+require_once __DIR__ . '/../../config/constants.php';
+
+$pageTitle = "NIIT - Diploma Programmes";
 $useTemplateAssets = true; 
 $current_page = "diploma";
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-<?php include "../../includes/header.php"; ?>
+<?php include INCLUDES_PATH . '/header.php'; ?>
 
                     <!-- portfolio start -->
                     <section class="portfolio diploma-hero">
@@ -23,7 +25,7 @@ $current_page = "diploma";
 
                     <section class="diploma-split">
                     <!-- LEFT DIPLOMA -->
-                        <a href="/diploma/software-engineering" class="diploma-split__item left">
+                        <a href="/software-engineering" class="diploma-split__item left">
                             <div class="diploma-split__overlay"></div>
                             <div class="diploma-split__content">
                             <h2>MMS Software Engineering</h2>
@@ -33,7 +35,7 @@ $current_page = "diploma";
                         </a>
 
                         <!-- RIGHT DIPLOMA -->
-                        <a href="/diploma/multimedia" class="diploma-split__item right">
+                        <a href="/infrastructure" class="diploma-split__item right">
                             <div class="diploma-split__overlay"></div>
                             <div class="diploma-split__content">
                             <h2>MMS Infrastructure Engineering</h2>
@@ -43,6 +45,7 @@ $current_page = "diploma";
                         </a>
                     </section>
 
-    <?php include "../../includes/footer.php"; ?>
+    <?php include INCLUDES_PATH . '/footer.php'; ?>
+
 </body>
 </html>

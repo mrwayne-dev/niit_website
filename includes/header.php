@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-// Since header.php is in the same folder as these, we just include them directly
 include "head.php"; 
 include "template-css.php"; 
 ?>
@@ -57,6 +56,7 @@ include "template-css.php";
                         <div class="contact-item">
                             <span class="icon"><i class="ph ph-phone"></i></span>
                             <span class="text"><a href="tel:+2349153110525">+234-915-311-0525</a></span>
+                            <span class="text"><a href="tel:+2348069625113">+234-806-9625-113</a></span>
                         </div>
                     </div>
                 </div>
@@ -64,13 +64,18 @@ include "template-css.php";
         </div>
     </aside>
     <div class="offcanvas-overlay"></div>
-    <header class="header-area-7">
+    <header class="header-area-7 <?= ($navbar_mode ?? 'light') === 'dark' ? 'navbar-dark' : 'navbar-light' ?>">
         <div class="header-main">
             <div class="container large">
                 <div class="header-area-7__inner">
                     <div class="header__logo">
-                        <a href="index.html">
-                            <img src="../../assets/images/logo/niit-logo.svg" class="normal-logo" alt="imageSite Logo">
+                        <a href="/">
+                            <?php
+                            $logo = (($navbar_mode ?? 'light') === 'dark')
+                                ? "/assets/images/logo/niit-logo-dark.svg"
+                                : "/assets/images/logo/niit-logo.svg";
+                            ?>
+                            <img src="<?= $logo ?>" class="normal-logo" alt="NIIT Logo">
                         </a>
                     </div>
                     <div class="header__nav pos-center">
